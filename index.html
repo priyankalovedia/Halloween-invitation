@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            animation: head 2s infinite;
+            text-shadow: 0 0 100px white;
+            box-shadow: 0 0 100px white;
+        }
+
+        @keyframes head {
+            25%{
+                color: red;
+            }
+            50%{
+                color: blue;
+            }
+            75%{
+                color: green;
+            }
+            
+        }
+        /* #last{
+            animation: ball 4s infinite;
+        }
+        @keyframes ball {
+            0%{
+                color: white;
+            }
+            50%{
+                color: rgb(0, 8, 255);
+            }
+
+            
+        } */
+
+        /* .box{
+            animation: b 4s infinite;
+        }
+        @keyframes b {
+            25%{
+                border-color: white;
+            }
+            50%{
+                border-color: rgb(65, 65, 68);
+            }
+            65%{
+                border-color: brown;
+            }
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="pump">
+        <div class="pair"><span class="eye"><span class="eye1"><span class="eye11"></span></span></span>
+            <span class="eye">
+                <span class="eye2"><span class="eye22"></span></span>
+            </span></div>
+        <div class="mouth">
+            <span id="mouth">
+            </span>
+        </div>
+    </div>
+    <div class="box"> <div class="boxcontent" id="join">JOIN US IF YOU DARE FOR</div></div>
+    <div class="below"><h1>Halloween Party</h1>
+        <p id="para1" class="about">November 1 AT 5:00 PM</p>
+       <p class="about"> ABOUT THE VENUE <br>House, street, address </p>
+<div id="end">FUN
+    Games , Costumes, And more and more horor and ghosts</div>
+    <br><br>
+
+<div id="last">Happy to see the Ghhhostsss.......</div>
+    
+    </div>
+    <div>--------------------------------</div>
+   
+
+    <script>
+        const ani = document.getElementById('join');
+
+        const keyframes = [
+            {
+            transform:"Scale(1.1)",
+        }, 
+        {
+            transform:"scale(1.2)",
+        },
+        {
+            transform:"scale(1)",
+        },
+    ];
+        const timing = {
+            duration:2000,
+            iterations:50
+        };
+
+        ani.animate(keyframes,timing);
+
+       
+
+        const x = document.createElement('h1');
+        x.innerHTML = "Hello Everyone";
+        document.body.append = x;
+
+        document.body.style.backgroundImage='url("ghost.png")';
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.backgroundColor='rgba(0, 0, 0, 0.3)';
+
+
+        const first=document.getElementsByClassName('box');
+        first[0].style.width='1100px';
+        first[0].style.height='400px';
+        first[0].style.background='linear-gradient(black, grey)';
+        first[0].style.border='3px solid orange';
+        first[0].style.boxShadow=' 5px 10px 8px #888888';
+        first[0].style.borderRadius='47%';
+        first[0].style.marginLeft='12%';
+        first[0].style.color='white';
+
+
+
+        const content=document.getElementsByClassName('boxcontent');
+        content[0].style.marginLeft='12%';
+        content[0].style.marginTop='8%';
+        content[0].style.color='#888888';
+        content[0].style.fontFamily="Segoe UI";
+        content[0].style.fontWeight='600';
+        content[0].style.fontSize='100px';
+        content[0].style.textAlign='center';
+
+
+        const belowcontent=document.getElementsByClassName('below');
+        // belowcontent[0].style.marginLeft='12%';
+       
+        belowcontent[0].style.color='#888888';
+        belowcontent[0].style.fontFamily="Segoe UI";
+        // belowcontent[0].style.fontWeight='600';
+        belowcontent[0].style.fontSize='60px';
+        belowcontent[0].style.textAlign='center';
+
+        const second=document.getElementsByClassName('pump');
+        second[0].style.width='140px';
+        second[0].style.paddingLeft='5px'
+        second[0].style.paddingRight='5px'
+        second[0].style.height='140px';
+        second[0].style.boxShadow=' -5px -10px 8px 6px #888888';
+        second[0].style.background='linear-gradient( yellow)';
+        second[0].style.borderLeft='3px solid darkgrey';
+        second[0].style.borderRight='3px solid darkgrey';
+        second[0].style.borderTop='3px solid darkgrey';
+        second[0].style.borderBottom='none';
+        second[0].style.left='200px';
+        second[0].style.borderRadius='46%';
+    
+
+        const third=document.getElementsByClassName('eye');
+        third[0].style.paddingLeft=' 7px';
+        third[0].style.paddingRight='7px';
+        third[0].style.paddingBottom=' 3px';
+        third[0].style.backgroundColor='black';
+        third[0].style.color= 'white';
+        third[0].style.borderRadius= '50%';
+        // third[0].style.position='absolute';
+        third[0].style.marginLeft='80px';
+        third[0].style.marginTop='12%';
+        // third[0].style.left='2200px';
+        third[0].style.border=' 2px solid black';
+        third[0].style.margin='10px';
+
+        const eye1=document.getElementsByClassName("eye1");
+        eye1[0].style.paddingLeft=' 11px';
+        eye1[0].style.paddingRight='11px';
+        eye1[0].style.paddingBottom=' 3px';
+        eye1[0].style.backgroundColor='white';
+        eye1[0].style.color= 'white';
+        eye1[0].style.borderRadius= '50%';
+        eye1[0].style.marginTop='12%';
+        eye1[0].style.border=' 2px solid black';
+
+        const eye11=document.getElementsByClassName("eye11");
+        eye11[0].style.paddingLeft=' 3px';
+        eye11[0].style.paddingRight='3px';
+        eye11[0].style.paddingBottom=' 3px';
+        eye11[0].style.backgroundColor='black';
+        eye11[0].style.color= 'white';
+        eye11[0].style.borderRadius= '50%';
+        eye11[0].style.marginTop='12%';
+        eye11[0].style.border=' 2px solid black';
+
+        const eye2=document.getElementsByClassName("eye2");
+        eye2[0].style.paddingLeft=' 11px';
+        eye2[0].style.paddingRight='11px';
+        eye2[0].style.paddingBottom=' 3px';
+        eye2[0].style.backgroundColor='white';
+        // eye2[0].style.color= 'white';
+        eye2[0].style.borderRadius= '50%';
+        // third[0].style.position='absolute';
+        // eye2[0].style.marginLeft='100px';
+        eye2[0].style.marginTop='12%';
+        // third[0].style.left='2200px';
+        eye2[0].style.border=' 2px solid black';
+        // eye2[0].style.margin='10px';
+
+        const eye22=document.getElementsByClassName("eye22");
+        eye22[0].style.paddingLeft=' 3px';
+        eye22[0].style.paddingRight='3px';
+        eye22[0].style.paddingBottom=' 3px';
+        eye22[0].style.backgroundColor='black';
+        eye22[0].style.color= 'white';
+        eye22[0].style.borderRadius= '50%';
+        eye22[0].style.marginTop='12%';
+        eye22[0].style.border=' 2px solid black';
+
+
+        third[1].style.paddingLeft=' 11px';
+        third[1].style.paddingRight='11px';
+        third[1].style.paddingBottom=' 3px';
+        third[1].style.backgroundColor='black';
+        third[1].style.color= 'white';
+        third[1].style.borderRadius= '50%';
+        // third[1].style.boxShadow=' 5px 10px 8px #888888';
+        third[1].style.border=' 2px solid black';
+        third[1].style.marginLeft='10px';
+        third[1].style.marginTop='30px';
+
+        const pair=document.getElementsByClassName("pair");
+        pair[0].style.marginTop='40px';
+        pair[0.].style.marginLeft='-6px';
+
+        const mouth=document.getElementsByClassName("mouth");
+        
+        mouth[0].style.paddingLeft=' 7px';
+        mouth[0].style.paddingRight='7px';
+        mouth[0].style.paddingBottom=' 10px';
+        mouth[0].style.width='60px';
+        mouth[0].style.height='20px';
+        mouth[0].style.backgroundColor='black';
+        mouth[0].style.color= 'white';
+        mouth[0].style.borderRadius= '50%';
+        mouth[0].style.marginLeft='30px';
+        mouth[0].style.marginTop='35px';        
+        document.getElementById("mouth").style.textDecoration='3px solid white wavy';
+
+        document.getElementById("end").style.color='darkred';
+        document.getElementById("end").style.fontSize='50px';
+        document.getElementById("end").style.fontWeight='bold';
+        document.getElementById("last").style.color='green'
+        document.getElementById("last").style.fontWeight='bold';
+
+
+        const about=document.getElementsByClassName("about");
+        about[0].style.color='white';
+        about[0].style.fontFamily='montseratt';
+
+
+        
+        const ele = document.querySelector('h1, below');
+        ele.style.color='rgb(170, 79, 13)';
+        ele.style.marginTop='8%';
+
+
+
+        document.getElementById.style.color='whitesmoke';
+        document.getElementById.style.fontSize='30px';
+
+        const ab=document.getElementsByClassName("about");
+        ab[0].style.textDecoraton='underline red 5px';
+        // ab[0].style.transition='underline 2s infinite';
+        ab[0].style.animation='underline 2s infinite';
+        ab[0].style.keyFrameEffect = `
+       @Keyframe underline{
+            0%{
+                textDecoration ='underline red 5px';
+            }
+            50%{
+                textDecoration= 'underline blue 5px';
+            }
+        }
+    `;    
+
+    // const end=document.getElementsByClassName("end");
+    // end[0].style.backgroundImage='url("photo-1509411273045-2920cee823be.png")';
+    </script>
+</body>
+</html>
